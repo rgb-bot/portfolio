@@ -1,0 +1,128 @@
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* fixes viewport alignmnent issue */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px red;
+}
+
+.cylinder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 80vh;
+  /* -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(-5deg); */
+  /* border: solid red 1px; */
+}
+
+.axis {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  /* must match height of face */
+  height: 20vh;
+  width: 12px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: spin 8s infinite linear;
+
+}
+
+@keyframes spin {
+  0% {
+      -webkit-transform: rotateX(0);
+  }
+  100% {
+      -webkit-transform: rotateX(-360deg);
+  }
+}
+
+.face {
+  box-sizing: border-box;
+  position: absolute;
+  height: 20vh;
+  width: 80vh;
+  -webkit-backface-visibility: hidden;
+  color: rgb(197, 197, 197);
+  font-size: 16vh;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  /* border: solid 1px red; */
+}
+
+.one {
+  -webkit-transform: translateZ(35vh);
+}
+.two {
+  -webkit-transform: rotateX(30deg) translateZ(35vh);
+}
+.three {
+  -webkit-transform: rotateX(60deg) translateZ(35vh);
+}
+.four {
+  -webkit-transform: rotateX(90deg) translateZ(35vh);
+}
+.five {
+  -webkit-transform: rotateX(120deg) translateZ(35vh);
+}
+.six {
+  -webkit-transform: rotateX(150deg) translateZ(35vh);
+}
+.seven {
+  -webkit-transform: rotateX(180deg) translateZ(35vh);
+}
+.eight {
+  -webkit-transform: rotateX(210deg) translateZ(35vh);
+}
+.nine {
+  -webkit-transform: rotateX(240deg) translateZ(35vh);
+}
+.ten {
+  -webkit-transform: rotateX(270deg) translateZ(35vh);
+}
+.eleven {
+  -webkit-transform: rotateX(300deg) translateZ(35vh);
+}
+.twelve {
+  -webkit-transform: rotateX(330deg) translateZ(35vh);
+}
+
+.info {
+  display: flex;
+  width: 80vh;
+  justify-content: center;
+  padding: 6vh;
+
+}
+
+.icon {
+  height: 35px;
+  width: 35px;
+  padding: 1vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
